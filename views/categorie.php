@@ -29,7 +29,7 @@ if (isset($_POST['find'])) {
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/' ?>"><i
                                             class="btn btn-sm btn-secondary mr-2 mb-2 fas fa-home"></i></a>
-                                    <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/addcateg' ?>"><i
+                                    <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/add' ?>"><i
                                             class="btn btn-sm btn-primary mr-2 mb-2 fas fa-plus"></i></a>
                                 </ul>
                                 <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>

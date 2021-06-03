@@ -20,7 +20,8 @@ if (isset($_POST['submit'])) {
             <div class="card">
                 <div class="card-header">Modifier </div>
                 <div class="card-body bg-light">
-                    <a class="btn btn-sm btn-secondary mr-2 mb-2" href="<?php echo 'https://localhost/mvc/' ?> ">
+                    <a class="btn btn-sm btn-secondary mr-2 mb-2"
+                        href="<?php echo 'https://localhost/mvcc/categorie' ?> ">
                         <i class="fas fa-home"></i>
                     </a>
                     <form method="POST">
