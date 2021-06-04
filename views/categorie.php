@@ -10,6 +10,47 @@ if (isset($_POST['find'])) {
 }
 ?>
 
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col -md-10 mx-auto">
+
+            <?php include('./views/includes/alerts.php'); ?>
+
+            <div class="card">
+                <div class=" card-body bg-light d-flex justify-content-between  ">
+
+
+                    <form class="d-flex" method="POST">
+                        <input class="form-control me-2" type="search" placeholder="Recherche dans Catégorie"
+                            name="search">
+                        <button class="btn btn-outline-success" name="find" type="submit">Recherche</button>
+                    </form>
+
+                    <div class="d-flex">
+                        <div class="mt-1">
+                            <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
+                            </i>
+                        </div>
+                        <div>
+                            <a href="<?php echo 'https://localhost/mvcc/logout' ?>"
+                                class=" btn btn-sm btn-primary m-1">Logout
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 <div class="container">
     <div class="row my-4">
         <div class="col -md-10 mx-auto">
@@ -32,18 +73,18 @@ if (isset($_POST['find'])) {
                                     <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/add' ?>"><i
                                             class="btn btn-sm btn-primary mr-2 mb-2 fas fa-plus"></i></a>
                                 </ul>
-                                <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
-                                </i>
-                                <form class="d-flex" method="POST">
+                                <!-- <i class=" me-2 fas fa-user"><php echo $_SESSION['username']; ?>
+                                </i> -->
+                                <!-- <form class="d-flex" method="POST">
                                     <input class="form-control me-2" type="search"
                                         placeholder="Recherche dans Catégorie" name="search">
                                     <button class="btn btn-outline-success" name="find" type="submit">Recherche</button>
-                                </form>
-                                <div>
+                                </form> -->
+                                <!-- <div>
                                     <a class="btn btn-sm btn-primary m-1" href="
-                                    <?php echo 'https://localhost/mvc/logout' ?>">Logout
+                                    <php echo 'https://localhost/mvc/logout' ?>">Logout
                                     </a>
-                                </div>
+                                </div> -->
                             </div>
                     </nav>
 

@@ -14,6 +14,47 @@ $employes = $data->getAllCategories();
             <?php include('./views/includes/alerts.php'); ?>
 
             <div class="card">
+                <div class=" card-body bg-light d-flex justify-content-between ">
+                    <div>
+                        <button class=" m-1 btn btn-info text-decoration-none">
+                            <a href="<?php echo 'https://localhost/mvcc/categorie' ?>" type="button">catégories
+                            </a>
+                        </button>
+                        <button class="m-1 btn btn-info">
+                            <a href="<?php echo 'https://localhost/mvcc/product' ?>" type="button">products
+                            </a>
+                        </button>
+                    </div>
+
+
+                    <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
+                    <!-- <button type="button" class="btn btn-success">Success</button> -->
+                    <div class="d-flex">
+                        <div class="mt-1">
+                            <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
+                            </i>
+                        </div>
+                        <div>
+                            <a href="<?php echo 'https://localhost/mvcc/logout' ?>"
+                                class=" btn btn-sm btn-primary m-1">Logout
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class=" container">
+    <div class="row my-4">
+        <div class="col -md-10 mx-auto">
+
+
+            <div class="card">
                 <div class=" card-body bg-light">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
@@ -30,27 +71,27 @@ $employes = $data->getAllCategories();
                                             class="btn btn-sm btn-primary mr-2 mb-2 fas fa-plus"></i></a>
                                 </ul>
 
-                                <div class="container">
+                                <!-- <div class="container">
                                     <button class="m-1 btn btn-info"> <a
                                             href="<?php echo 'https://localhost/mvcc/categorie' ?>" type="button">
                                             catégories</a>
-                                        <!-- </button><button class="m-1 btn btn-info"> <a
+                                         </button><button class="m-1 btn btn-info"> <a
                                             href="<php echo 'https://localhost/mvcc/product' ?>" type="button">
                                             product</a>
                                     </button> -->
-                                        <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
-                                        <!-- <button type="button" class="btn btn-success">Success</button> -->
-                                </div>
-
-                                <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
-                                </i>
-
-                                <div>
-                                    <a class="btn btn-sm btn-primary m-1" href="
-                                    <?php echo 'https://localhost/mvcc/logout' ?>">Logout
-                                    </a>
-                                </div>
+                                <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
+                                <!-- <button type="button" class="btn btn-success">Success</button> -->
                             </div>
+
+                            <!-- <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
+                            </i>
+
+                            <div>
+                                <a class="btn btn-sm btn-primary m-1" href="
+                                    <?php echo 'https://localhost/mvcc/logout' ?>">Logout
+                                </a>
+                            </div> -->
+                        </div>
                     </nav>
 
                     <!-- 1er table -->
@@ -72,8 +113,10 @@ $employes = $data->getAllCategories();
                                 <th scope=" row"><?php echo $employe['id'] ?></th>
                                 <td class="table-secondary">
                                     <?php echo $employe['categories'] ?></td>
-                                <td class="table-success"><?php echo $employe['produits'] ?></td>
-                                <td class="table-warning"><?php echo $employe['produits_vendus'] ?></td>
+                                <td class="table-success"><?php echo $employe['produits'] ?>
+                                </td>
+                                <td class="table-warning">
+                                    <?php echo $employe['produits_vendus'] ?></td>
 
                                 <td class="d-flex flex-row table-danger">
                                     <form class="mr-1" action="updatecateg" method="POST">
