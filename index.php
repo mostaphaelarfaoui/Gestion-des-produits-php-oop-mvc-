@@ -4,7 +4,9 @@ require_once './autoload.php';
 require_once './controllers/HomeController.php';
 $home = new HomeController();
 
-$pages = ['add', 'update', 'delete', 'logout', 'categorie', 'addcateg', 'hooome1', 'updatecateg', 'addProduct', 'product', 'updateProduct'];
+$pages = [  'categorie', 'addcategorie', 'updatecategorie', 'deletecategorie',
+            'logout', 'hooome1', 'addbord',
+             'product', 'addProduct', 'addproduct', 'updateProduct',  'updatebord', 'deleteProduct', ''];
 
 if(isset($_SESSION['logged']) && $_SESSION['logged'] === true){
 

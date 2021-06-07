@@ -1,9 +1,9 @@
 <?php
-include './controllers/CategorieController.php';
+include './controllers/BordController.php';
 
 
-$data = new categoriesController();
-$employes = $data->getAllCategories();
+$data = new bordsController();
+$employes = $data->getAllbords();
 
 ?>
 
@@ -17,25 +17,25 @@ $employes = $data->getAllCategories();
                 <div class=" card-body bg-light d-flex justify-content-between ">
                     <div>
                         <button class=" m-1 btn btn-info text-decoration-none">
-                            <a href="<?php echo 'https://localhost/mvcc/categorie' ?>" type="button">catégories
+                            <a class="text-decoration-none" href="<?php echo 'https://localhost/mvcc/categorie' ?>"
+                                type="button">catégories
                             </a>
                         </button>
                         <button class="m-1 btn btn-info">
-                            <a href="<?php echo 'https://localhost/mvcc/product' ?>" type="button">products
+                            <a class="text-decoration-none" href="<?php echo 'https://localhost/mvcc/product' ?>"
+                                type="button">products
                             </a>
                         </button>
                     </div>
 
-
-                    <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
-                    <!-- <button type="button" class="btn btn-success">Success</button> -->
                     <div class="d-flex">
-                        <div class="mt-1">
+                        <div class="mt-2">
                             <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
                             </i>
                         </div>
-                        <div>
-                            <a href="<?php echo 'https://localhost/mvcc/logout' ?>"
+                        <div class="mt-1">
+                            <a class="text-decoration-none btn btn-info"
+                                href="<?php echo 'https://localhost/mvcc/logout' ?>"
                                 class=" btn btn-sm btn-primary m-1">Logout
                             </a>
                         </div>
@@ -67,7 +67,7 @@ $employes = $data->getAllCategories();
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/' ?>"><i
                                             class="btn btn-sm btn-secondary mr-2 mb-2 fas fa-home"></i></a>
-                                    <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/addcateg' ?>"><i
+                                    <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/addbord' ?>"><i
                                             class="btn btn-sm btn-primary mr-2 mb-2 fas fa-plus"></i></a>
                                 </ul>
 
@@ -119,7 +119,7 @@ $employes = $data->getAllCategories();
                                     <?php echo $employe['produits_vendus'] ?></td>
 
                                 <td class="d-flex flex-row table-danger">
-                                    <form class="mr-1" action="updatecateg" method="POST">
+                                    <form class="mr-1" action="updatebord" method="POST">
                                         <input type="hidden" name='id' value="<?php echo $employe['id']; ?>">
                                         <button class="btn btn-sm btn-warning "> <i class="fa fa-edit"></i></button>
                                     </form>

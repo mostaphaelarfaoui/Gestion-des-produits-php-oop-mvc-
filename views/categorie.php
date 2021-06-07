@@ -1,12 +1,12 @@
 <?php
-include './controllers/EmployerController.php';
+include './controllers/CategorieController.php';
 
 if (isset($_POST['find'])) {
-    $data = new EmployesController();
-    $employes = $data->findEmployes();
+    $data = new CategoriesController();
+    $employes = $data->findCategories();
 } else {
-    $data = new EmployesController();
-    $employes = $data->getAllEmployes();
+    $data = new CategoriesController();
+    $employes = $data->getAllCategories();
 }
 ?>
 
@@ -19,14 +19,10 @@ if (isset($_POST['find'])) {
 
             <div class="card">
                 <div class=" card-body bg-light d-flex justify-content-between  ">
-
-
                     <form class="d-flex" method="POST">
-                        <input class="form-control me-2" type="search" placeholder="Recherche dans Catégorie"
-                            name="search">
+                        <input class="form-control me-2" type="search" placeholder="Recherche" name="search">
                         <button class="btn btn-outline-success" name="find" type="submit">Recherche</button>
                     </form>
-
                     <div class="d-flex">
                         <div class="mt-1">
                             <i class=" me-2 fas fa-user"><?php echo $_SESSION['username']; ?>
@@ -38,24 +34,16 @@ if (isset($_POST['find'])) {
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
-
-
-
-
 <div class="container">
     <div class="row my-4">
         <div class="col -md-10 mx-auto">
 
-            <?php include('./views/includes/alerts.php'); ?>
 
             <div class="card">
                 <div class=" card-body bg-light">
@@ -70,7 +58,8 @@ if (isset($_POST['find'])) {
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/' ?>"><i
                                             class="btn btn-sm btn-secondary mr-2 mb-2 fas fa-home"></i></a>
-                                    <a class="navbar-brand" href="<?php echo 'https://localhost/mvcc/add' ?>"><i
+                                    <a class="navbar-brand"
+                                        href="<?php echo 'https://localhost/mvcc/addcategorie' ?>"><i
                                             class="btn btn-sm btn-primary mr-2 mb-2 fas fa-plus"></i></a>
                                 </ul>
                                 <!-- <i class=" me-2 fas fa-user"><php echo $_SESSION['username']; ?>
@@ -137,11 +126,11 @@ if (isset($_POST['find'])) {
                                 <td class="table-info"><?php echo $employe['type_de_garantie'] ?></td>
                                 <td class="table-dark"><?php echo $employe['descriptif'] ?></td>
                                 <td class="d-flex flex-row table-danger">
-                                    <form class="mr-1" action="update" method="POST">
+                                    <form class="mr-1" action="updatecategorie" method="POST">
                                         <input type="hidden" name='id' value="<?php echo $employe['id']; ?>">
                                         <button class="btn btn-sm btn-warning "> <i class="fa fa-edit"></i></button>
                                     </form>
-                                    <form class="mr-1" action="delete" method="POST">
+                                    <form class="mr-1" action="deletecategorie" method="POST">
                                         <input type="hidden" name='id' value="<?php echo $employe['id']; ?>">
                                         <button class="btn btn-sm btn-danger "> <i class="fa fa-trash"></i></button>
                                     </form>
